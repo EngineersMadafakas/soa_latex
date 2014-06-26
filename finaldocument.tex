@@ -1,0 +1,608 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------
+
+\documentclass{article}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{kpfonts}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage[sort&compress]{natbib}
+\usepackage{tocloft}
+\usepackage[font={small,it}]{caption}
+\usepackage{listings}
+\usepackage{url} 
+\usepackage[official]{eurosym}
+\usepackage[hidelinks]{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{float}
+\usepackage{wrapfig}
+
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\cftsetindents{section}{0.5in}{0.5in}
+\cftsetindents{subsection}{0.5in}{0.5in}
+\cftsetindents{subsubsection}{0.6in}{0.6in}
+\cftsetindents{paragraph}{0.5in}{0.5in}
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+\addto\captionsspanish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Document Index}%
+  \renewcommand{\figurename}{Figure}
+  \renewcommand{\tablename}{Table}
+}
+\addto\captionsspanish{\renewcommand{\refname}{References}}
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+% ----------------------------------------------
+% The preamble finishes here.
+% ----------------------------------------------
+
+%--------------------------------------------------------------
+%	DOCUMENT COVER
+%--------------------------------------------------------------
+\title{MINDFULNESS PLATFORM} % Title
+%\author{THE MOTION TRACKERS TEAM} % Author name
+\date{03/14/2014}
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+\begin{center}{\Large \textbf{State of the art of Mindfulness-Based Mobile Applications}}
+\vspace{0.5cm}
+\end{center}
+\begin{center}
+\small{
+\begin{tabular}{|l|l|}
+\hline
+Team members: 	& Miguel Cabrera García, \textit{Telecommunications Engineer}.\\
+				& Pablo Gijón, \textit{Clinical Psychologist}.\\
+				& Alberto Olivares Ph.D., \textit{Telecommunications Engineer}.\\
+			  	& Pablo Rubio Sánchez, \textit{Software Engineer}.\\
+			  	& Gonzalo Ruiz García, \textit{Telecommunications Engineer}. \\\hline
+\end{tabular}
+}
+\end{center}
+\vspace{0.7cm}
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+\tableofcontents
+\newpage
+
+%--------------------------------------------------------------
+%	INTRODUCTION
+%--------------------------------------------------------------
+\section{Introduction}
+The present document contains a thorough state of the art of Mindfulness-based mobile applications (MBMAs). Its goal is to allow for the creation of a detailed list of features and functionalities of the already existing applications in order to help the identification of necessary functionalities as well as to propose novel ones.
+
+\subsection{Background}
+According to \cite{plaza2013}, interest in mindfulness has increased exponentially, particularly in the fields of psychology and medicine. The trait or state of mindfulness is significantly related to several indicators of psychological health, and mindfulness-based therapies are effective at preventing many chronic diseases. Interest in mobile applications for health promotion and disease self-management is also growing. Despite the explosion of interest, research on both the design and potential uses of mindfulness-based mobile applications (MBMAs) is scarce. Additionally, the number of existing applications with an acceptable quality is very low. 
+
+\subsection{Mindfulness-Based Therapies}
+Mindfulness techniques have emerged in the Western world in the fields of health and education as the application of ancient meditative practices from Buddhist tradition. It is from this tradition that they draw inspiration and take their basic technical features. Since its introduction, interest in mindfulness has increased exponentially particularly over the last two decades in the psychology and medicine fields. Several types of approaches have been tested from secular (mindfulness-based therapies-MBTs) to Eastern meditative traditions (such as Zen and Vipassana), and scientific evidence of their effectiveness is rapidly accumulating.
+
+The psychological trait or state of mindfulness refers to an awareness that emerges by way of paying attention intentionally and nonjudgementally, in the present moment, to the unfolding of the moment-by-moment experience. Mindfulness is a skill that can be obtained using several training techniques, and group and individual interventions have been designed for this purpose. Generally, two main complementary approaches have been used for mindfulness training (1) exercises in focused attention, and (2) open monitoring of experiences in the present moment.
+
+Mindfulness is significantly related to several indicators of physical and psychological health such as improved immune and autonomic nervous systems, higher levels of positive affect, life satisfaction, vitality, and adaptive emotional regulation, and it has been linked to lower levels of negative affect and psychopathological symptoms. Furthermore, MBTs have demonstrated effectiveness in treating many disorders, including chronic pain conditions.
+
+The mechanisms underlying the effects of mindfulness training on health are diverse and include improvements in attention control, coping and management of life stressors, descriptions of inner experiences, thoughts and emotional awareness and regulation, and changes in the concept of the self or body awareness. \textit{One of the main limitations of MBTs is the need for regular practice}. Psycho-technology mobile apps have demonstrated effectiveness as a complementary tool in many psychotherapies [12], and they would be expected to be useful in MBTs as well.
+
+\subsection{Smartphones as a key tool for mindfulness practice}
+Smartphones play an important role. They can perform intelligent operations and are capable of communicating to jointly deliver a service to the user \cite{davy}. Primary among these devices are 'mobile devices'. They are portable, allow access to information and data anywhere, and can be carried and used during their transport. Presently, this concept includes a very large number of devices-smartphones, PDAs, MP3 players, and laptops. Most current mobile devices contain wireless communication capabilities. The common characteristics of mobile devices are their small size, portability, processing capability, network connection, and limited memory. Specifically, smartphones and small tablets allow access to a large number of apps (mobile-based software). Additionally, they can be incorporated into daily activities in a nonintrusive way.
+
+The use of mobile devices is increasing continuously. In 2012, global smartphone shipments grew $46\%$ to 722 million units, (ie, smartphone shipments have more than tripled since 2009 when 174 million units were shipped). The tablet market also did very well in the past year. Total shipments reached 128 million units, which was a $78\%$ increase over 2011. Conversely, the personal computer (PC) industry continued to struggle in 2012. Shipments of laptop and desktop PCs declined $3\%$ and $4\%$, respectively, as consumers switched to mobile connected devices \cite{Richter_statista,IDC}.
+
+According to Milosevic et al \cite{milosevic}, users of today's ever-increasing number of mobile phones expect to have their favorite desktop apps on smartphones. In addition, a number of new apps are taking advantage of the specific features and sensors on smartphones. This tendency also has been observed in healthcare. A study of the Healthx Team concluded that the most recent growth in mobile apps usage has not proliferated at the expense of browsing the traditional Web; people are simply using mobile apps more \cite{healthx}. Medical/health care is the third-fastest-growing app category for both the iPhone and Google's Android phones based on information from Float Mobile Learning \cite{Englehart}.
+
+%--------------------------------------------------------------
+%        EXISTING APPLICATIONS 
+%--------------------------------------------------------------
+
+\section{Existing Applications}
+We proceed now to carry out a detailed analysis of each one of the most relevant existing applications. We will analyze their features, the interface, the user navigation and the opinion of the users based on the comments left in both Google's Play Store and Apple's AppStore.
+
+%--------------------------------------------------------------
+%			THE MINDFULNESS APP
+%--------------------------------------------------------------
+
+\subsection{The Mindfulness App}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/TMFA_icon.jpg}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+The Mindfulness App is a meditation assistant application offered by MindApss, a company based in Stockholm, Sweden which is run by Magnus Fridh and Martin Wikfalk who are both Yoga teachers. The application is offered under a payment of \euro{1,74} for Android and \euro{1,79} for iOS. It has been downloaded $10.000 - 50.000$ times from the Play Store and approximately $72.000$ times from the AppStore \footnote{download numbers from the AppStore are kept private, this number is an approximation offered by www.xyo.net}.\\
+Among the existing applications, The Mindfulness App has the neatest interface and graphical design. It is important to remark that the iOS application has a different and more modern interface than the Android Application. \\
+In terms of support and maintenance, the iOS Application was last updated the 27th of March, 2014 while the Android application was last updated the 6th of May, 2014. \\
+One of the main strengths of this application is that it is offered in English, Swedish, Spanish, French, German, Italian, Portuguese, Dutch, Danish and Norwegian. 
+
+\subsubsection{Features} 
+
+According to MindApps, these are the main functionalities of their application:
+\begin{itemize}
+\item By setting reminders at times and days of your choice you can get a message when it's time to meditate.
+\item You can choose if you want to sit for a shorter or longer period.
+\item You can be guided by a voice or just sit in silence with bells ringing at different times.
+\item You can also design your own meditation for as long as you want it to last.
+\item You can set Mindfulness Notices at chosen times that can help you to increase your presence in the moment.
+\item Through the Mindfulness App you can simply 'call yourself up' from time to time to check whether you really are there.
+\item It is of course possible to start a meditation just by starting the Mindfulness App and choosing which meditation you want to listen to - for example if you have some time in the subway, bus, in a queue or if you just want to sit for a while.
+\item All the meditations that you have done are stored in the statistics section so that you have a possibility to follow how your meditation practice is developing over time.
+\item Regarding the content, the Mindfulness App contains:
+
+\begin{itemize}
+\item 4 Guided meditations: 3, 5, 15, and 30 minutes.
+\item 4 Silent meditations with bells: 3, 5, 15, and 30 minutes.
+\item 1 Guided Body Scan.
+\end{itemize}
+
+\item Possibility of designing a modified meditation with our without guided intro.
+\item Mindfulness Notices.
+\item Reminder function.
+\item Statistics.
+
+\item The iOS application also offers a store in which you can purchase extra meditations offered by some of the worlds most influential (as they claim) meditation teachers. \textit{No information about the price of these extra meditations is offered}. The extra meditations are designed in partnership with Sounds True \footnote{Sounds True is a multimedia publishing company founded in 1985 by Tami Simon, with the mission of disseminating spiritual wisdom. The company is based in Louisville, Colorado, near Boulder, Colorado.[2][3] The company publishes over 800 spoken-word audio and music recordings, books, multimedia learning resources, and online educational programs from those prominent in the fields of spirituality, psychology, health, and healing, including NY-Times bestselling authors Eckhart Tolle, Pema Chodron, Geneen Roth, Jon Kabat-Zinn, Clarissa Pinkola Estés, Andrew Weil, Brené Brown, and Caroline Myss. The company organizes and hosts an annual event, dedicated to personal growth and spiritual transformation, called The Wake Up Festival, in August of each year, in Estes Park, Colorado} (\url{http://www.soundstrue.com/}).
+\end{itemize}
+\subsubsection{Analysis of the user interface}
+We will start by analyzing the interface of the Android App. The application has five main sections which can be navigated through by means of a five-button menu which is located at the bottom of the screen. The appearance of the Android App has the feel and look of iOS 6 as it seems that the application was first developed in iOS and subsequently adapted to Android. The dominant colors are blue (with different tonalities) and black. The screen is always divided in three sections: a navigation menu located at the bottom (spanning $\sim$15\% of the screen space), a bar showing the name of the sections located at the top ($\sim$10\% of screen space) and the content frame ($\sim$75\% of the screen space) located in the middle. \\
+Figure \ref{fig:allScreens} shows all five sections of the application. Notice how the overall appearance of the design is minimalistic and simplistic. The designers have followed a "no-frills" policy. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.19\textwidth]{figures/TMFA_main_section_screenshot_thumb.png}
+\includegraphics[width=0.19\textwidth]{figures/TMFA_reminder_section_screenshot_thumb.png}
+\includegraphics[width=0.19\textwidth]{figures/TMFA_stats_section_screenshot_thumb.png}
+\includegraphics[width=0.19\textwidth]{figures/TMFA_config_section_screenshot_thumb.png}
+\includegraphics[width=0.19\textwidth]{figures/TMFA_more_section_screenshot_thumb.png}
+\caption{Appearance of the five sections of The Mindfulness App.}
+\label{fig:allScreens}
+\end{figure}
+
+
+In the following, we will describe in detail the functionalities and structure of each one of the sections.
+\begin{itemize}
+\item \textbf{Main/Meditation section:} The leftmost screen in figure \ref{fig:notes_screen_TMFA} shows the meditation section (which it has been chosen to be the main section) of the application. As it can be seen, the main section displays a menu in which five different options can be chosen: 
+\begin{itemize}
+\item \textit{Welcome:} This section shows a welcome message CHECK THIS AGAIN.
+\item \textit{Guided Meditations}: This section offers 4 guided meditations of different durations (3, 5, 15, and 30 minutes).
+\item \textit{Silent Meditations:} This section offers 4 silent meditations with bells of different durations (3, 5, 15, and 30 minutes).
+\item \textit{Mindfulness notes}: This section contains a series of notes containing mindfulness related messages. This notes can be configured to be shown to the user at a given time or at a given place. The notes that are shown are either random or user-selected. Additionally, the user can create his own notes. The three rightmost screenshots in figure \ref{fig:notes_screen_TMFA} show the appearance of the Mindfulness notes section.
+\item \textit{Personalized Meditations:} This section allows the user to create his own meditations. The options to customize the meditation are scarce. The application only allows to include/remove the guided introduction, to select the duration of the silent meditation and the time interval of the bells. Figure \ref{fig:personalized_meditation_TMFA} shows the appearance of the Personalized Meditations section. 
+\end{itemize}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.20\textwidth]{figures/TMFA_main_section_screenshot_notes_arrow.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_notes_section_screenshot1.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_notes_section_screenshot2.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_notes_section_screenshot3.png}
+\caption{Appearance of the Mindfulness notes section of The Mindfulness App.}
+\label{fig:notes_screen_TMFA}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.20\textwidth]{figures/TMFA_main_section_screenshot_perso_arrow.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_perso_med_section_screenshot.png}
+\caption{Appearance of the Personalized Meditations section.}
+\label{fig:personalized_meditation_TMFA}
+\end{figure}
+
+\item \textbf{Reminders Section:} The user can set reminders to start a meditation or to pop up mindfulness notes. COMPLETE THIS. 
+\item \textbf{Statistics Section:} This section contains statistics about the number of meditations. It basically shows the number of times per week, month and year, that a specific meditation was carried out.
+\item \textbf{Configuration Section:} This section offers a few options to modify some aspects of some sections of the application. The options are listed below:
+\begin{itemize}
+\item Keep screen during meditation (YES/NO).
+\item Use of bells during guided meditations (YES/NO).
+\item Text of the reminders (Configurable by user).
+\item Show animation at start-up (YES/NO).
+\item Show default animation at start-up (YES/NO).
+\end{itemize}
+\item \textbf{More Section:} This section contains the following subsections:
+\begin{itemize}
+\item About The Mindfulness App: This section contains information about the application, its developers, its purpose and the person in charge of the traslation.
+\item Suggestions of use: COMPLETE THIS.
+\item Mindfulness Courses: COMPLETE THIS.
+\item About Mindapps: This section contains information about the company which has developed the app.
+\item Informed consent: COMPLETE THIS.
+\item Share: COMPLETE THIS.
+\end{itemize}
+
+Figure \ref{fig:reminders_stats_config_more_TMFA} shows screenshots of the \textit{reminders}, \textit{statistics}, \textit{configuration} and \textit{more} sections.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.20\textwidth]{figures/TMFA_reminder_section_screenshot.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_stats_section_screenshot.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_config_section_screenshot.png}
+\includegraphics[width=0.20\textwidth]{figures/TMFA_more_section_screenshot.png}
+\caption{Appearance of the reminders (left), statistics (center-left), configuration (center-right) and more (right) sections.}
+\label{fig:reminders_stats_config_more_TMFA}
+\end{figure}
+
+\end{itemize}
+\subsubsection{Analysis of content}
+TO BE COMPLETED WHEN GONZALO COMES BACK.
+
+\subsubsection{Analysis of business model and strategy}
+The business model for the Android app is different from the iOS app. For the Android app the only revenue stream is the price payed to download it. Therefore, it follows a pay-once strategy and obtains no extra value from customers who use the application. \\
+\indent On the other hand, in addition to the pay-once strategy, the iOS app includes a store which permits the user to buy and download extra meditations which are designed by leading figures of the meditation scene. This allows the company to monetize users (as they may become returning customers) after they have downloaded the application and can also be helpful to increase their satisfaction and involvement in the platform. This strategy also supposes the creation of a basic multi-sided platform \footnote{Two-sided markets, also called two-sided networks, are economic platforms having two distinct user groups that provide each other with network benefits. The organization that creates value primarily by enabling direct interactions between two (or more) distinct types of affiliated customers is called multi-sided platform (MSP).} as the application is a small-sized platform which establishes contact between meditators and creators of medidation routines. 
+\subsubsection{Critical Analysis}
+This is arguably the best MBMA in the market and still it has many things that could be improved.
+\begin{itemize}
+\item \textbf{Navigation and interface}: The navigation is not always clear and there are many redundant options which can be accessed from different screens, which is sometimes a bit confusing.
+\item \textbf{Graphic design}: The graphic design is very improvable. The fonts are too large, and the gray boxes which contain the submenus are not fancy.
+\item \textbf{Content}: 
+\end{itemize}
+
+\subsubsection{Users' feedback}
+
+\begin{itemize}
+\item \textbf{Android}: The users make very positive comments about the application. They state that the application is intuitive, easy to use and very good to take up into meditation. Some of the users suggest to include a clock sound (tic-tac) as one of the background sounds of the meditations. One of the users says that he downloaded the application because it was recommended in a mindfulness course he followed. 
+
+\item \textbf{iOS}: There are only three reviews by users so we will directly reproduce them here.
+\begin{itemize}
+\item \textit{Once I got over the fact that the woman guiding the meditation kept using impersonal terms like "what is the state of mind" instead of "what is your state of mind," I found the voice very calming. As someone who experiences palpitations at night, this seems to help by taking my whole level of anxiety down a notch and giving me some breathing procedures and ways of thinking that I can use when I have a palpitation episode. It doesn't always help, but sometimes it does and that's worth something. Interesting how my perception of the amount of time between her comments can vary so much from day to day."}
+\item \textit{"I have recently completed Jon Kabat-Zinn's Mindfulness Based Stress Reduction class and have found this app to be better than the class CDs because of its versatility. I had been worried I would not be able to maintain my meditation practice but this app is keeping me on track. It can be stressful to fit stress reduction into your life style! This app alleviates a little of that stress with reminders and by the features that let you customize each meditation."}
+\item \textit{"It is a great app to help you maintain a routine of at least a few minutes of daily meditation. The options are great, but I would love to be able to set how often the bells should ring during silent meditation and to have a few options of voices for the guided meditations. I recommend and gift this app for all those who enjoy or are starting a life practicing meditation!".}
+\end{itemize}
+\end{itemize}
+\subsubsection{Wrap-up}
+HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP HERE GOES THE WRAP-UP
+\begin{table}
+\centering
+\begin{tabular}[!h]{|l|l|}
+\hline
+\textbf{Operating System} & iOS 6 or later and Android 2.2 or later. \\ \hline
+\textbf{Price} &  \euro{1.74} (Android) and \euro{1.78} (iOS)\\ \hline
+\textbf{Revenue stream} & Pay once (Android), Pay once and extra premium content (iOS)\\ \hline 
+\textbf{Number of downloads} & $10,000 - 50,000$ (Android) and $\sim70,000$ (iOS).\\ \hline
+\textbf{Users' rating} & 4.2 out of 5 (English version), 4.8 out of 5 (Spanish version).\\ \hline
+\textbf{Content} &	\\ \hline
+\textbf{Functionalities}& \\ \hline
+
+\end{tabular}
+\end{table}
+
+%--------------------------------------------------------------
+%			SIMPLY BEING
+%--------------------------------------------------------------
+
+\subsection{Simply Being}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/SB_icon.jpg}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+Simply Being is a guided meditation application, offered by Meditation Oasis, a webpage created by Mary and Richard Maddux. Mary is a meditation instructor and Richard is a music composer specialized in meditation, relaxation and healing. The application is offered under a payment of \euro{0,73} for Android and \euro{0,89} for iOS. It has been downloaded  $10.000 - 50.000$ (est. $29.000$) times from the Play Store and around $73.000$ times from the AppStore (estimated by xyo.net). The Android version was last updated on Dec 19 2013, and the iOS version on Jul 1 2013.\\
+
+This application offers a very simple and straightforward way for users to do guided meditations, letting them select a background sound or music and the duration of the exercise. The design is plain, a background image and transparent buttons. The differences between the iOS and the Android versions are minimal, only some visual changes on the menus, based on the native interface of each OS. \\
+
+The application is not localized, being offered only in the English language. 
+
+\subsubsection{Features} 
+
+According to the developer, these are the main functionalities of their application:
+\begin{itemize}
+\item Meditate easily as you are voice-guided step by step.
+\item Choose a meditation length of 5, 10, 15 or 20 minutes.
+\item Listen to the meditation with or without music/nature sounds.
+\item Listen to the music or nature sounds alone.
+\item Read instructions to support and enhance your meditation.
+\item Relax deeply and experience the present moment completely.
+\item Enjoy the benefits of meditation.
+\item Links to support on the Meditation Oasis website.
+\item Separate Volume Controls for voice and music/nature sounds.
+\end{itemize}
+
+As we can see this app doesn't offer a lot of fancy features, but for the user expecting to use is as a tool for guided meditation is enough. Some of the "features" announced are not really so, but supposed effects of its use. 
+
+\subsubsection{Analysis of the user interface}
+
+We will analyze the Android application, which is the one we have access to. The interface has the same background for every section, a subtle drawing of a tree and a starry night in a emerald green tone, with the name of the app on the top. There is no other menu, or ways to go from one section to another apart from going back to the start menu. Each section has a "Menu" button on the bottom of the screen to go back to the start menu. \\
+
+In figure \ref{fig:SB_allScreens} all the sections are shown except the guided meditation, which will be analyzed later. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/SB_instructions.png}
+\includegraphics[width=0.32\textwidth]{figures/SB_contact_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/SB_promotion.png}
+\caption{Appearance of the secondary sections of the Simply Being application.}
+\label{fig:SB_allScreens}
+\end{figure}
+
+First we will analyze each of the secondary sections.
+
+\begin{itemize}
+\item \textbf{App Instructions:} This section shows a scrollable frame of text that covers most of the screen, containing some guidance on the use of the application and general tips on meditation. The frame has a solid background that is not in line with the look of the rest of the application. 
+\item \textbf{Contact:} This section contains four buttons at the top which lead to the website and social profiles of the content creators. The rest of the screen (saving the bottom "Menu" button) is a \textit{WebView} frame containing the Android Application Support page. The look is very poor, since the web page shown is not optimised for the resolution of the frame and the user can scroll vertically and horizontally through it. Also, any link clicked inside the frame will open in the predefined browser, thus leaving the application. 
+\item \textbf{Rate This App:} This is just a link to the Google Play page of the application.
+\item \textbf{Better Sleep:} This section is just a promotion for another application of the same creators. It uses another background that breaks completely the style of the application. The text background is a solid blue that is also not in line with the rest of the application.
+\end{itemize}
+
+Now we will analyze the main section, which is the Guided Meditation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.24\textwidth]{figures/SB_choose_background_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/SB_choose_duration_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/SB_start_meditation_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/SB_during_meditation_screenshot.png}
+\caption{Appearance of the Guided Meditation process in the Simply Being application.}
+\label{fig:SB_meditation}
+\end{figure}
+
+When we select the Guided Meditation option, we are presented with four options of background sounds:
+
+\begin{itemize}
+\item Music.
+\item Rain.
+\item Ocean.
+\item Stream.
+\end{itemize}
+
+The next step lets you choose the duration of the meditation:
+
+\begin{itemize}
+\item 5 Minutes.
+\item 10 Minutes.
+\item 15 Minutes.
+\item 20 Minutes.
+\end{itemize}
+
+A good design decision on this step is showing at the top the background selection you have just made, and letting you change it if wanted. \\
+
+After choosing background and duration the meditation screen is presented. At the top, both choices are shown, with a button that lets you change them. Below this the play button lets you start the meditation. At the bottom of the screen, there are two sliders so the user can adjust the background and voice volume, and finally the button to go back to the main screen. When the start button is pressed, it is replaced by the pause, and another, stop button, appears. When paused, only a resume button is shown. \\
+
+The app's navigation is intuitive and fast, but the device's back button is not well integrated. The user expects the back button to bring him to the last screen, but if he is already in the main menu the back button should exit the application and not go back to previous screens. There is no "exit" or "close app" button, so the only way to exit is to press the back button repeatedly until the stack of previous screens is empty and the next press does what is intended to do and exits.
+
+\subsubsection{Analysis of content}
+TO DO:TRY TO LISTEN TO THE MEDITATIONS
+
+\subsubsection{Analysis of business model and strategy}
+
+The only source of revenue for the creators comes from the cost of the application on the Google Play and iTunes stores. There are no in-app purchases available or extra content. The application feels more like a way for the creators to broaden their audience and make themselves better known. On their website, they offer paid meditation courses and other materials which are probably their main source of revenue. 
+
+\subsubsection{Critical Analysis}
+The application does what it is expected by the user, but the interface is poorly thought out, with inconsistencies between screens. Also the native buttons, even though they are transparent, make the application look cheap.\\
+
+The content.... LISTEN TO THE MEDITATIONS
+
+\subsubsection{Users' feedback}
+
+On Google Play, the application has a 4.4 out of 5 rating with 370 total opinions, but not a single comment, which is strange given that it has been purchased at least over $10.000$ times. \\
+
+On iTunes App Store, it has a 4.3 out of 5 rating (no info on the number of ratings).\\
+
+Reading the comments on xyo.net for both iOS and Android versions, most users praise the application's simplicity of use. The content gets a lot of positive feedback too, because of the calm and soothing voice and the relaxing sounds and music. The only negative review finds the quantity of options lacking, and also criticises the impossibility to customize it in any way.
+
+
+\subsubsection{Wrap-up}
+
+This application shows that even paid apps have a market if they deliver what they announce, and there are people out there looking for meditation applications and willing to pay if the content has enough quality, even if the application itself is not very fancy looking. For most users the important part is the content and the ease of use, while there is a minority that looks for more options and customization.
+
+%--------------------------------------------------------------
+%         MINDFULNESS BELL
+%--------------------------------------------------------------
+
+\subsection{Mindfulness Bell}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/MB_icon.jpg}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+The Mindfulness Bell rings periodically during the day, to give you the opportunity to hold on for a moment and consider what you are currently doing, and in what state of mind you are while you are doing it. It is developed by Mindful Apps (no more info since their website http://www.mindful-apps.com/ is down). The application is offered for free, and it has been downloaded around $149.000$ times from the Play Store (est. by xyo.net). It was last updated on Jan 4 2012. There is an application with the same name in the Apple AppStore, but it is not developed by the same team (although the similarities are suspicious). \\
+
+The application is as simple as it can be, it lets the user define the periodicity of the bell and it will sound during the day. The interface is minimal, since nothing more is needed. It is only available in English. 
+
+\subsubsection{Features} 
+
+The main functionalities of the application are:
+\begin{itemize}
+\item Bell sounds with variable intervals (from 5 minutes to 4 hours)
+\item Define start and stop bell times (so it doesn't sound at night)
+\item Various mute and vibrate options
+\end{itemize}
+
+The concept is simple and so is the application, it offers just what it is expected of it. 
+
+\subsubsection{Analysis of the user interface}
+
+When opened, the application shows a photo of a meditation bell with a text on the bottom that explains the purpose of the bell. There is a small menu button at the bottom bar that lets the user select between 'Settings' and 'About'. The bell sounds if the user taps the screen, and a small message pops up asking to use the menu button.  \\
+
+In figure \ref{fig:MB_allScreens} all the screens are shown.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.24\textwidth]{figures/MB_main_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/MB_menu_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/MB_preferences_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/MB_about_screenshot.png}
+\caption{Appearance of the screens of the Mindfulness Bell application.}
+\label{fig:MB_allScreens}
+\end{figure}
+
+The preferences screen lets the user select the following options:
+
+\begin{itemize}
+\item Mindfulness Bell Active: Turn it on/off.
+\item Show bell when ringing: shows the bell image on screen when it rings.
+\item Show status icon: shows icon if bell is active.
+\item Volume.
+\item Vibrate: Device vibrates when the bell sounds.
+\item Mute with phone: Bell does not ring if device is muted.
+\item Mute during phone calls.
+\item Ring bell about every...: User can choose 5, 10, 15, 30 minutes, 1, 2, 3 or 4 hours.
+\item Start bell every day at... User can choose on the hour, from midnight to 11 PM.
+\item Stop bell every day at... User can choose on the hour, from midnight to 11 PM.
+\end{itemize}
+
+Finally, the 'About' screen just shows the URL to the developers web page and a small text about them, again with the bell image. 
+
+\subsubsection{Analysis of content}
+
+The bell sound and image are the only real content of the application. The sound is easily noticeable but not too intrusive. 
+
+\subsubsection{Analysis of business model and strategy}
+
+The application is free, so business-wise it is just a way to advertise the development team. There is no extra content or in-app purchases available. 
+
+\subsubsection{Critical Analysis}
+The Mindfulness Bell is a simple idea turned into an application. It doesn't need a fancy interface, just a fast way to activate and configure it. The only visual setback is the position of the Menu button, located at the bottom right corner and very small in size. It would be better if the application made use of the Android's Action Bar with the menu button on the top right. 
+
+
+\subsubsection{User's feedback}
+
+On Google Play, the application has a 4.5 out of 5 rating with $1.820$ total opinions. The user's comments talk about how the app helps them to bring back attention to the present moment, which is one of the basic precepts of mindfulness. Reading the comments on xyo.net, they are also generally positive. A minority of users ask for more scheduling options and more accurate interval times.
+
+
+\subsubsection{Wrap-up} 
+
+This application shows that turning a really simple concept into an app can produce very good results if done properly. It is arguable how many people would pay for such a simple application, but the number of downloads it can get as a free application might be enough to make users check out other apps from the same developer.
+
+%--------------------------------------------------------------
+%			MEDITA MEDITATION TRACKER
+%--------------------------------------------------------------
+
+\subsection{Meditate Meditation Timer}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/MMT_icon.jpg}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+Meditate Meditation Timer is a simple, yet complete, meditation helper. Pre-recorded sessions (with no voice, just sound) guide the user's meditation and help him fall asleep or find affirmation. Both beginners and experienced meditators can use the app. The user can record his sessions and watch as he increases in duration and strength over time.\\
+The app is only available for Android and it has both free version and a premium version which costs \euro{1.79}. The installations range between $1,000$ and $5,000$ and it has an average score of 4.4 out of 5. The App is designed by \textit{MeditateApp} which do not have other apps in Google's PlayStore. It was last updated the 3rd of September, 2013. 
+
+\subsubsection{Features} 
+The application has the following features:
+
+\begin{itemize}
+\item Choose between single mode or customizable meditation plans.
+\item Make notes after each meditation's session. All of them will be stored in the history and statistic charts for further reviewing or editing.
+\item Single mode is a customizable mode for quick setup of meditations in which it is possible to:
+\begin{itemize}
+\item Set up the duration of meditation (Hours:Minutes).
+\item Select different Meditations: Normal Meditation, Meditation with Affirmation and Fall Asleep mode. Affirmation mode let's you to type and save the affirmation sentence you want to focus your meditation on. Fall Asleep category has always given setup for quieting the each next time sound is playing.
+\end{itemize}
+\item The meditation plans include programmable meditation plans with as many programmable steps as you want to have in. In this mode, it is possible to:
+\begin{itemize}
+\item Create as many plans as desired. 
+\item Name and edit the plan title.
+\item Create any amount of steps.
+\item Choose the category of meditation for each step.
+\item Set duration time for each step (Hours:Minutes).
+\item Edit every previously created step.
+\item Delete steps.
+\item Edit current category step or its duration from the main window of application (directly after it has started).
+\end{itemize}
+\item The application features a statistics section which includes:
+\begin{itemize}
+\item Zoomable and scrollable statistics, divided into 7, 30, 90, 365 days and 'Show All' selectable options. Each select mode displays overall amount of hours/minutes of meditations for the chosen period of time.
+\end{itemize}
+\item There is also a History section in which information about the completed meditations can be checked. It is possible to:
+\begin{itemize}
+\item Check date, start and end time of meditation.
+\item Category, note, affirmation, number of step, title of plan.
+\item Edit previously created notes or create new ones.
+\item Delete history entries.
+\end{itemize}
+\item Finally, the settings allow the user to:
+\begin{itemize}
+\item Choose between 9 beautiful meditation sounds.
+\item Choose his own sound file from the phone storage.
+\item Set the preparation time.
+\item Set the sound repeating time.
+\item Turn on/off the sound looping.
+\item Turn on/off the functionality that fades out the sound. 
+\item Automatic repetition of plan after completion.
+\item Check how meditation sound files sound directly from the settings window.
+\item Set time of daily notification.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Analysis of the user interface}
+The main screen is divided in three parts. The first part includes a bar located at the top in which the user can choose between the \textit{Single mode} and the \textit{Default Plan mode}. This bar spans $\sim 10\%$ of the screen. The second part spans $\sim 80\%$ of the screen and shows the meditation timer, the name of the meditation and a figure in the Lotus posture. By swiping the screen it is possible to choose between the three different types of offered meditations (\textit{Affirmation}, \textit{Medidation} and \textit{Fall Asleep}). The third part is a menu bar which is located at the botton and which has five sections: \textit{Stats}, \textit{History}, \textit{M (main screen)}, \textit{Plans} and \textit{Settings}.\\
+
+Regarding the graphic design, the app is designed in brownish colors. Most of the buttons are beveled which makes the app look rather old (according to nowadays trends). \\ 
+
+The navigation, usability and intuitiveness of the app are acceptable, however there are a couple of things which are quite anti-intuitive. First, to start the meditation, the user must push the big 'M' button located at the bottom. It may take a while to realize how to start the meditation. Additionally, there are no arrows nor any other symbols indicating that the main screen can be swiped to select between the different meditation types. Finally, when writing the message to be displayed in the Affirmation screen, the keyboard covers the message box so it is difficult to see what is being written. \\
+
+We proceed now to analyze the four remaining sections of the app. 
+
+\begin{itemize}
+\item \textbf{Stats}: This section includes the duration of the completed meditations per day, week, month, 3 months, and year. The duration time is shown in big letters and by means of a bar plot to see the progression. The bar plot can be swiped both to the left and to the right to observe the desired time slot.
+\item \textbf{History}: This section includes a history of all the carried out meditations. The user can check the starting and ending times, the duration, the type of meditation and the message that can be added at the end of the meditation. 
+\item \textbf{Plans}: This section includes a meditation editor with which the user can create and edit meditation plans. A meditation plan is composed of as many steps as desired. Each of the steps can be configured to be one of the three available meditation types. Additionally, the time of each one of the steps can also be configured. The free version only allows a single (default) plan, while the premium version allows as many plans as desired. 
+\item \textbf{Settings}
+
+\end{itemize}
+\subsubsection{Analysis of content}
+\subsubsection{Analysis of business model and strategy}
+\subsubsection{Critical Analysis}
+\subsubsection{Users' feedback}
+\subsubsection{Wrap-up}
+
+%--------------------------------------------------------------
+%			HEADSPACE (ON-THE-GO)
+%--------------------------------------------------------------
+
+\subsection{Headspace (on-the-go)}
+
+\subsubsection{Features} 
+\subsubsection{Analysis of the user interface}
+\subsubsection{Analysis of content}
+\subsubsection{Analysis of business model and strategy}
+\subsubsection{Critical Analysis}
+\subsubsection{Users' feedback}
+\subsubsection{Wrap-up} 
+
+
+%--------------------------------------------------------------
+%			BIBLIOGRAPHY
+%--------------------------------------------------------------
+\bibliographystyle{unsrt}
+
+\bibliography{refs}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
