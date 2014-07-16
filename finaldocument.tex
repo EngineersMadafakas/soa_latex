@@ -21,7 +21,7 @@
 
 \documentclass{article}
 
-\usepackage[spanish]{babel}
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx} % Required for the inclusion of images
 \usepackage{epsfig}
@@ -40,7 +40,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 
-
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
@@ -53,15 +52,15 @@
 \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
 \makeatother
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
-\addto\captionsspanish{% Replace "english" with the language you use
+%\addto\captionsspanish{% Replace "english" with the language you use
   \renewcommand{\contentsname}%
     {Document Index}%
   \renewcommand{\figurename}{Figure}
   \renewcommand{\tablename}{Table}
-}
-\addto\captionsspanish{\renewcommand{\refname}{References}}
+%}
+%\addto\captionsspanish{\renewcommand{\refname}{References}}
 %\usepackage{times} % Uncomment to use the Times New Roman font
-
+%\addcontentsline{toc}{section}{References}
 % ----------------------------------------------
 % The preamble finishes here.
 % ----------------------------------------------
@@ -71,7 +70,7 @@
 %--------------------------------------------------------------
 \title{MINDFULNESS PLATFORM} % Title
 %\author{THE MOTION TRACKERS TEAM} % Author name
-\date{03/14/2014}
+\date{\today}
 
 \begin{document}
 
@@ -1017,6 +1016,7 @@ Also remarkable is the way in which this application presents meditation without
 %--------------------------------------------------------------
 %			BIBLIOGRAPHY
 %--------------------------------------------------------------
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{unsrt}
 
 \bibliography{refs}
