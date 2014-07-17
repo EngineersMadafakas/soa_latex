@@ -21,7 +21,7 @@
 
 \documentclass{article}
 
-\usepackage[spanish]{babel}
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx} % Required for the inclusion of images
 \usepackage{epsfig}
@@ -40,7 +40,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 
-
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
@@ -53,15 +52,15 @@
 \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
 \makeatother
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
-\addto\captionsspanish{% Replace "english" with the language you use
+%\addto\captionsspanish{% Replace "english" with the language you use
   \renewcommand{\contentsname}%
     {Document Index}%
   \renewcommand{\figurename}{Figure}
   \renewcommand{\tablename}{Table}
-}
-\addto\captionsspanish{\renewcommand{\refname}{References}}
+%}
+%\addto\captionsspanish{\renewcommand{\refname}{References}}
 %\usepackage{times} % Uncomment to use the Times New Roman font
-
+%\addcontentsline{toc}{section}{References}
 % ----------------------------------------------
 % The preamble finishes here.
 % ----------------------------------------------
@@ -71,7 +70,7 @@
 %--------------------------------------------------------------
 \title{MINDFULNESS PLATFORM} % Title
 %\author{THE MOTION TRACKERS TEAM} % Author name
-\date{03/14/2014}
+\date{\today}
 
 \begin{document}
 
@@ -572,28 +571,446 @@ We proceed now to analyze the four remaining sections of the app.
 \item \textbf{Stats}: This section includes the duration of the completed meditations per day, week, month, 3 months, and year. The duration time is shown in big letters and by means of a bar plot to see the progression. The bar plot can be swiped both to the left and to the right to observe the desired time slot.
 \item \textbf{History}: This section includes a history of all the carried out meditations. The user can check the starting and ending times, the duration, the type of meditation and the message that can be added at the end of the meditation. 
 \item \textbf{Plans}: This section includes a meditation editor with which the user can create and edit meditation plans. A meditation plan is composed of as many steps as desired. Each of the steps can be configured to be one of the three available meditation types. Additionally, the time of each one of the steps can also be configured. The free version only allows a single (default) plan, while the premium version allows as many plans as desired. 
-\item \textbf{Settings}
-
+\item \textbf{Settings}: This section includes a series of options that can be configured by the user. Options include: preparation time, single mode duration, play sound every X seconds, loop sound, each next sound quieter, repeat plan after last step, plan steps auto continuation, change sound (a list of sounds is provided and the user can also select his own file), change ending bell, everyday notifications and set notifications time.
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.20\textwidth]{figures/MMT_main_screen.png}
+	\includegraphics[width=0.20\textwidth]{figures/MMT_plan_screen.png}	
+	\includegraphics[width=0.20\textwidth]{figures/MMT_stats_screen.png}
+	\includegraphics[width=0.20\textwidth]{figures/MMT_history_screen.png}		
+	\label{fig:MT_meditation}
+	\caption{Appearance of Meditation Timer screens}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.20\textwidth]{figures/MMT_options_screen1.png}
+	\includegraphics[width=0.20\textwidth]{figures/MMT_options_screen2.png}	
+	\includegraphics[width=0.20\textwidth]{figures/MMT_options_screen3.png}	
+	\label{fig:MT_options}
+	\caption{Appearance of Meditation Timer configuration screen}
+\end{figure}
+
 \subsubsection{Analysis of content}
+TO BE COMPLETED
 \subsubsection{Analysis of business model and strategy}
+The application has a free version and a premium version. The free version includes ads at the top (spanning around $10\%$). Additionally, some of the functionalities are only available in the premium version. Some examples of the limited options are:
+\begin{itemize}
+	\item Statistics are only available for the last 7 days.
+	\item Only one personalized meditation plan is allowed.
+	\item The ending bell can not be changed.
+	\item User own sound files can not be selected.
+\end{itemize}
+
 \subsubsection{Critical Analysis}
+TO BE COMPLETED
 \subsubsection{Users' feedback}
 \subsubsection{Wrap-up}
 
-%--------------------------------------------------------------
-%			HEADSPACE (ON-THE-GO)
-%--------------------------------------------------------------
+% -----------------------------------
+%        MINDFULNESS FOCUS NOW
+% -----------------------------------
 
-\subsection{Headspace (on-the-go)}
+\subsection{Mindfulness Focus Now}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/MFN_icon.png}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+Mindfulness Focus Now (MFN), is a meditation helper focused on keeping the user from distraction and being aware of the thoughts that do distract him. It is offered by Marcial Arredondo Rosas, part of the "Mindfulness\&Psicología Barcelona" team. Marcial is a Clinical Psychologist currently researching for the UAB about mindfulness training. The application is being used as a tool in his research. \\
+
+The application is offered for free, both for Android and iOS. It has been downloaded around $5.400$ times from the Play Store and around $4.000$ from the Apple AppStore (estimated by xyo.net). The Android version was last updated Oct 10 2013, and the iOS version on Oct 17 2013.\\
+
+The application is not localized, being offered only in the Spanish language.
+
 
 \subsubsection{Features} 
+
+The developer doesn't offer a list of features, here we show the list made after careful analysis of the application:
+\begin{itemize}
+\item Five different guided meditations.
+\item Distraction log: while meditating, record each distraction with duration (less than 10 sec, 10 sec to 1 min, more than 1 min) and kind of thought (neutral, positive, negative or mixed).
+\item Send by email the distraction log (as plain text).
+\item Time Box Mindful: Use the distraction log for any activity that requires concentration for a certain amount of time.
+\item Three tutorial videos.
+\end{itemize}
+
+The only distinguishing feature of this app from others is the distraction log, but the raw results it presents may be hard for the average user to interpret. \\
+
 \subsubsection{Analysis of the user interface}
+
+We will analyse the Android application, which is the one we have access to. The main interface is a simple list in orange and white, which gives access to every feature of the app. There is a fixed button on the bottom to give faster access to the silent practice.\\
+
+In the figure \ref{fig:MFN_allScreens} the splash screen and the main menu are shown. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/MFN_splash_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/MFN_menu1_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/MFN_menu2_screenshot.png}
+\caption{Appearance of the splash screen and menu of the Mindfulness Focus Now application.}
+\label{fig:MFN_allScreens}
+\end{figure}
+
+The use instructions are just a text screen with an explanation on how to use the distraction log screen that we will show later. The video list shown in the menu directly takes the user to the Youtube application or the browser to watch the video. The Silent Practice option lets the user select the duration before starting. \\
+
+In figure \ref{fig:MFN_moreScreens} we can see the duration selection for the Silent Practice, the practice interface and the distraction log results.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/MFN_duration_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/MFN_meditation_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/MFN_distraction_log_screenshot.png}
+\caption{Appearance of the duration selection, practice and results for the Mindfulness Focus Now application.}
+\label{fig:MFN_moreScreens}
+\end{figure}
+
+The duration selection uses the native time spinner, the design is clean and consistent with the rest of the application. The meditation screen shows a countdown timer, Play/Pause and Stop buttons on top. The rest of the screen is split in half vertically, and is used to record the distractions. The number of taps on each side lets the user input the duration and kind of distraction. Finally, after the practice ends the distraction log is shown; it is a simple list containing every distraction logged with duration, kind and time into the practice when it happened. On the bottom of the screen there are to buttons, one lets the user send the log by email, the other goes back to the main menu after alerting the user that the results will be erased on exit.
+
 \subsubsection{Analysis of content}
+TO DO:TRY TO LISTEN TO THE MEDITATIONS
+
 \subsubsection{Analysis of business model and strategy}
+
+The application is free of charge, and there are no other revenue sources like in-app purchases or advertising. Our guess is this application has been developed in the context of Marcial Arredondo's PhD research, as a tool to collect meaningful data. 
+
 \subsubsection{Critical Analysis}
+As it has been said earlier, the application looks more like a tool for a specific research than a end-user driven approach. Still, some of its features could be of interest to the user looking for free meditation applications, specially in the Spanish language, since it is one of the few applications analysed with content in Spanish. \\
+
+The distraction log system may be too complex for the average user, since it requires him to memorize the number of taps that represent each duration and kind of distraction, and then use it in a moment that he's supposed to not be thinking about anything. \\
+
+The user interface is simple, but well thought out and coherent across the whole application. \\
+
+The content.... LISTEN TO THE MEDITATIONS
+
 \subsubsection{Users' feedback}
-\subsubsection{Wrap-up} 
+
+On Google Play, the application has a 4.0 out of 5 rating with 47 total opinions. The comments are generally positive, but the users say they are doing the practices without using the screen (the distraction log feature), since they have to think which side of the screen to tap and how many times, which further aggravates the loss of concentration.  \\
+
+On iTunes App Store, the application doesn't have enough ratings. There are only two comments, that praise the application's content and professional look.\\
+
+\subsubsection{Wrap-up}
+
+Even though the application is primary developed as a tool for a specific research, it has reached almost $10.000$ downloads between iOS and Android, and more important it has been given positive feedback from the users. Since there are so few applications with content in Spanish, users are willing to try them even if the look is not very fancy. \\
+
+
+% -----------------------------------
+%        OMVANA
+% -----------------------------------
+
+\subsection{Omvana}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/OMV_icon.png}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+Omvana is a meditation and content provider application, developed by Mindvalley Creations Inc. Mindvalley is a digital publishing company based in Kuala Lumpur (Malaysia), specialised in the areas of personal growth, entrepreneurship, lifestyle applications, and continuous education. Mindvalley employs 100+ people, it was featured in Inc. Magazine's Top 10 World's Coolest Offices and won WorldBlu's global Most Democratic Workplace Award for 7 years in a row. \\
+
+The application works as a content market, providing a mix of free and paid sound tracks (music and spoken). It then lets you listen to the tracks and even mix any spoken track with any music track on the background.\\
+
+Omvana is offered for free, both for Android and iOS. It has been downloaded around $1.000$ times from the Play Store and around $502.000$ times from the Apple AppStore (estimated by xyo.net). The cause for this huge difference in downloads is that the Android version was very recently added to the store. The full name of the iOS version is ``Omvana - Meditate, Sleep, Focus, Relax, Rest \& Nap Better with 1000s of Mindfulness, Hypnosis, Meditation and Binaural Sounds'', probably used as a SEO trick to get more results for every keyword used in the name. \\
+
+The application is not localised, being offered only in the English language.
+
+
+\subsubsection{Features} 
+
+The features described by the developer are:
+
+\begin{itemize}
+\item 1000s of high-quality audio tracks, ambient sounds, binaural beats and narrated guides.
+\item Your own Omvana mixing board ? mix and match any two of your favorite tracks.
+\item Listen to narrated lessons and guides by inspiring thought leaders, like Bob Proctor and Martin Luther King, Jr
+\item Sleep better with access to a powerful library of Sleep enhancement sounds
+\item Deepen your experience with a library of calming ambient tunes and background sounds, featuring cutting-edge binaural beats technology
+\item Transform and grow with access to powerful guided visualizations for every aspect of your personal growth from many best-selling authors.
+\item Mix and match custom tracks to help you effortlessly achieve your goals ? stress relief, better health, heightened focus, even wealth and abundance
+\item Record your own meditations and customize them using our mixing tool.
+\item Get more out of your guided meditations with interactive track notes and video tips.
+\item Expand your personal library whenever you want ? record your own guided meditations, or easily preview and purchase new tracks from the Omvana store 
+\end{itemize}
+
+In our own analysis of the application, we didn't find the option to record your own meditations. It may be well hidden in an obscure menu or maybe it was added to the feature list before it has been implemented. \\
+
+\subsubsection{Analysis of the user interface}
+
+We will analyse the Android application, which is the one we have access to. The home screen is a grid view with thumbnails of the available tracks for the user to listen. Android's Action Bar is conveniently customized at the top, with the Store icon on the left and the Mixer icon on the right.\\
+
+The mixer shows two rows of round thumbnails, the top one containing the ambient sounds/music and the bottom one the vocals. The thumbnails can be swiped left or right to select the desired ambient and vocal tracks. A slider lets the user calibrate the balance between the ambient and the vocals. Finally, at the bottom, a Play/Pause button and a Heart to make the combination of ambient and vocals a favourite. If the user later selects one of the tracks and enters the mixer, it will select by default the favourite combination. \\
+
+In the figure \ref{fig:OMV_HomeMixerScreens} the home screen and the mixer are shown.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/OMV_home_screenshot.png}
+\includegraphics[width=0.45\textwidth]{figures/OMV_mixer_screenshot.png}
+\caption{Appearance of the home screen and mixer of the Omvana application.}
+\label{fig:OMV_HomeMixerScreens}
+\end{figure}
+
+Now we will analyse the store interface. When the user enters the store, he is asked to login using his Facebook account, which will be used to save purchased tracks in case he switches terminals. After a successful login, the Featured page is shown, which offers the user the first selection of content for purchase. The look and feel of the store has been designed to resemble Android's Play Store, with a slider menu that offers the different sections. Different screenshots of the store are shown in figure \ref{fig:OMV_storeScreens}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.24\textwidth]{figures/OMV_login_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/OMV_store_featured_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/OMV_store_categories_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/OMV_store_paid_screenshot.png}
+\caption{Appearance of the Omvana store.}
+\label{fig:OMV_storeScreens}
+\end{figure}
+
+When an item is selected, there is an option to preview a few seconds of the track, which plays it on the same screen. If Download is clicked, a progress bar is shown until the download finishes. Then the button changes to Play, which if clicked goes directly to the player. \\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/OMV_track_page_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/OMV_preview_item.png}
+\includegraphics[width=0.32\textwidth]{figures/OMV_track_download_screenshot.png}
+\caption{Appearance of a single track on the Omvana store.}
+\label{fig:OMV_storeScreens}
+\end{figure}
+
+
+\subsubsection{Analysis of content}
+
+Omvana puts great effort into content selection. There is an Author Application form in their website, so anything published in the application market has already gone through the company's filter. The offer of content is very wide. The tracks can be of two different kinds:
+
+\begin{itemize}
+\item Spoken tracks: Meditations, hypnosis, inspiring talks, motivation speeches...
+\item Music tracks: Relaxation music, binaural sounds, nature 
+\end{itemize}
+
+There is both paid and free content, available for easy downloading to the users. 
+
+\subsubsection{Analysis of business model and strategy}
+
+Omvana is a content publisher, so they provide the platform for the authors to sell their content. We haven't been able to find the actual numbers, but Mindvalley most likely gets a percentage of every in-app purchase, same as Apple or Google get a cut on their app market's purchases.
+
+\subsubsection{Critical Analysis}
+
+Omvana has been dubbed as "The Spotify of Meditation", and rightfully so, since it tops the charts for Lifestyle applications in more than 30 countries. The whole application has a professional look\&feel, the navigation is seamless and the Store works just as the native Play Store, making it easy for the users to adapt. The mixer is a nice touch, that gives the users another level of customization. The quantity of content is colossal, although quality may vary. It is clear after using this application that there is a big team behind taking care of both the content and the application functionality. 
+
+\subsubsection{Users' feedback}
+
+On Google Play, the application has a 3.5 out of 5 rating with 72 total opinions. The application is so new that still there are no comments.  \\
+
+On iTunes App Store, the application has a 4.5 out of 5 rating with 1626 total opinions. The comments talk about the ways listening to the contents have helped the users coping with problems or improving their lives, but very few discuss the actual application. Some of the features users suggest are:\\
+
+\begin{itemize}
+\item A timer to shut off the tracks after a certain time (which is included in sister app Dormio).
+\item More flexibility for the mixer, so you can mix two background tracks instead of vocals/background only.
+\item Review mechanism for the content, so users can rate the tracks they download.
+\end{itemize}
+
+The negative comments are mostly about instability issues, that seems resolved with the last updates. Also with the obligation to use a Facebook account to login to retain in-app purchases.  
+
+\subsubsection{Wrap-up}
+
+This application differs to most of the other ones in that its only role is as a content provider, not generating its own content. This lets them focus on design and usability, providing a very stable and well thought out experience. The biggest drawback of this approach is that on one side you need a large user base which is willing to pay for quality content, and on the other, authors generating this content that are willing to share their profit by using your platform. In this case the company already had both the user base and the authors before launching the application, this way they reached over $300.000$ iOS downloads in less than six months. 
+
+% ----------------------
+%        HEADSPACE
+% ----------------------
+
+\subsection{Headspace}
+\begin{wrapfigure}{l}{0.08\textwidth}
+  \vspace*{-0.8cm}
+  \begin{center}
+    \includegraphics[width=0.08\textwidth]{figures/HS_icon.png}
+  \end{center}
+  \vspace*{-0.5cm}
+\end{wrapfigure}
+
+Headspace is a full meditation platform founded by Andy Puddicombe, a former Buddhist monk turned speaker and published author. The philosophy of Headspace is to apply all the concepts of classic meditation but stripping out any religious or transcendental wrapping that usually go with it. This way they can reach a public that otherwise would be repelled by the yoga positions, incense sticks, zen gardens and in general what could be called ``new age'' look. The project launched initially in 2010 as a web platform, later expanding to the mobile application environment. As of July 2014, the whole platform just underwent a total design and content overhaul.  \\
+
+The application is offered for free, both for Android and iOS, but most of the content is available to subscribers only. The subscription rates are as follows:
+
+\begin{itemize}
+\item Monthly: \euro{9,95}
+\item Yearly: \euro{71,88} (\euro{5,99}/month)
+\item Two years: \euro{113.76} (\euro{4,74}/month)
+\item Forever: \euro{395,95}
+\end{itemize}
+
+Headspace has been downloaded around $144.000$ times for Android and $227.000$ times for iOS (estimated by xyo.net). \\
+
+The application is not localised, being offered only in the English language. 
+
+\subsubsection{Features} 
+
+The features described by the developer are:
+
+\begin{itemize}
+\item Free access to Take10, Level 1 of the Foundation Course. Learn the basics in 10 x 10 minute meditations.
+\item Personalised progress page to track your stats.
+\item Buddy system for you and your friends to motivate each other in your journey's.
+\item Rewards for regular meditation.
+\item Reminders to keep you on track with your practice.
+\item Options for you to continue your journey after Take10, with inspiring packs and one off sessions on a range of topics such as stress, happiness and appreciation.
+\item Ability to download sessions for offline use.
+\end{itemize}
+
+
+\subsubsection{Analysis of the user interface}
+
+We will analyse the Android application, which is the one we have access to. The first time the user opens the application, a six step introduction tour is shown, which can be seen in figures \ref{fig:HS_tourScreens1} y \ref{fig:HS_tourScreens2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_tour1_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_tour2_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_tour3_screenshot.png}
+\caption{Introduction tour for the Headspace application.}
+\label{fig:HS_tourScreens1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_tour4_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_tour5_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_tour6_screenshot.png}
+\caption{Introduction tour for the Headspace application.}
+\label{fig:HS_tourScreens2}
+\end{figure}
+
+After the introduction tour, the main screen is shown, but with a translucent message that instructs on how to navigate through the main application tabs, shown in figure \ref{fig:HS_mainScreens1}. Also every screen has a question mark on the top right that further explains how the application works. This overly guided interface shows a lack of confidence from the designer's point, as if the navigation is not intuitive enough for the average user to grasp without constant guiding. \\
+
+The main screens are Timeline, Progress and Buddies. The Timeline is a visual way of working through each of the meditations, unlocking the next each time one is completed. When a practice is selected, the meditation screen opens. The design is simple, at the top it shows the level, session and time, with a big Play/Pause button in the middle. A nice added touch is that the round button organically changes its shape during the meditation. It is shown in figure \ref{fig:HS_mainScreens1}. \\
+
+The Progress screen shows the user's statistics, such as average practice duration, number of sessions or total time meditating. It also shows the number of users meditating in that moment, strengthening the feeling of community, and finally a simple achievement system that rewards the user for consecutive days meditating. The Buddies section lets the user follow their friends, again trying to give a sense of community. All of them are shown in figure \ref{fig:HS_mainScreens2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_main_help_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_timeline_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_meditation_screenshot.png}
+\caption{Main screens of the Headspace application.}
+\label{fig:HS_mainScreens1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_progress1_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_progress2_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_buddies.png}
+\caption{Main screens of the Headspace application.}
+\label{fig:HS_mainScreens2}
+\end{figure}
+
+In the top right corner, beside the question mark, there are two icons that are hard to understand at first sight. Upon clicking them we learn they give access to more content: the left one is Series and the right one is Singles. The screens for them are shown in figure \ref{fig:HS_singlesSeries}. As can be seen in the last screen, all this content is subscriber only.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.24\textwidth]{figures/HS_series_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/HS_singles_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/HS_singles_sos_screenshot.png}
+\includegraphics[width=0.24\textwidth]{figures/HS_singles_subscription_screenshot.png}
+\caption{Series and Singles screens of the Headspace application.}
+\label{fig:HS_singlesSeries}
+\end{figure}
+
+The rest of the application content is accessed using the top left menu button, that on press opens a \emph{Facebook style} side menu. This menu is shown in figure \ref{fig:HS_menuScreens}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_menu1_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_menu2_screenshot.png}
+\caption{Side menu of the Headspace application.}
+\label{fig:HS_menuScreens}
+\end{figure}
+
+The remaining screens of the application are:
+
+\begin{itemize}
+\item Animations: Short videos containing explanations on what mindfulness is and how to approach it.
+\item Support: Link to the FAQ on the website.
+\item Get more Headspace: What subscription offers and subscription options.
+\item The Science: How some studies revealed the benefits of mindfulness on lifestyle, performance, relationships and health.
+\item Andy: Brief introduction to the pivotal role in Headspace, Andy Puddicombe.
+\item Get some, give some: Corporate Social Responsibility, each subscription is matched with another free to someone in need.
+\item Downloads: Lets the user pre-download content for offline access.
+\item Set Reminders: Alarm to remember meditating.
+\item Set Mindfulness Buzzers: Daily messages to keep the user mindful. Can be set from 1 to 5 a day.
+\item Switch to V1: Lets the user access the pre-update content.
+\end{itemize}
+
+Some of the more meaningful screens are shown in figures \ref{fig:HS_restScreens1} and \ref{fig:HS_restScreens2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_animations_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_buzzer_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_downloads_screenshot.png}
+\caption{Animation, Mindfulness Buzzer and Download screens of the Headspace application.}
+\label{fig:HS_restScreens1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/HS_reminder_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_science_screenshot.png}
+\includegraphics[width=0.32\textwidth]{figures/HS_whosandy_screenshot.png}
+\caption{Reminder,Science and Who's Andy screens of the Headspace application.}
+\label{fig:HS_restScreens2}
+\end{figure}
+
+
+\subsubsection{Analysis of content}
+
+The amount of content this platform offers is astonishing. There are two main blocks: Series and Singles. Series are groups of meditations designed to be practised in order, one at a day. Singles, on the other hand, are designed to be listened in any order and time, when the user feels they could be helpful. \\
+
+The Series content is split in:
+
+\begin{itemize}
+\item Foundation: The introduction to meditation and mindfulness. Three 10-day levels which unlock the entire library on completion.
+\item Health: Three 30-day packs on Stress, Anxiety and Sleep.
+\item Relationships: A 30-day pack on Relationships and two 10-day packs on Change and Appreciation.
+\item Performance: Two 30-day packs on Creativity and Focus and a 10-day pack on Happiness.
+\item Headspace Pro: Three 10-day levels as an introduction to silent meditation. 
+\end{itemize}
+
+The Singles content consists of:
+
+\begin{itemize}
+\item SOS: Three two-minute exercises to take the heat off a heated or stressful situation.
+\item On-the-go: Meditation applied to everyday activities like sleeping, walking, eating, commuting, cooking and running.
+\item Classic: One-off meditation sessions in guided and unguided formats, from 10 to 60 minutes.
+\end{itemize}
+
+All the practices are recorded by Andy Puddicombe himself, and are available in the web platform as well. 
+
+\subsubsection{Analysis of business model and strategy}
+
+Headspace is a subscription platform. Only the first 10 practices are free to try, and after that if you want to continue listening to more content you need to pay the monthly, yearly, 2 years or forever subscription. The strategy is to show in only ten days the benefits of meditation to the users who try it, so they become subscribers after that. The company is rumoured to have over 1 million registered users as of now (of course, registered users doesn't mean subscribers). Anyhow, the number of current users meditating shown in the app is always over $3.000$. \\
+
+After such a big visual and technical overhaul, the next step is to probably expand via localization and internationalisation, offering the content in other languages as well. 
+
+\subsubsection{Critical Analysis}
+
+As a full meditation platform, this is probably the most complete and well thought out. The new application and web site are perfectly integrated, with a coherent visual style. The design uses a lot of illustrations that try to give it a more modern look. Everything, from the design, to the text and the actual content, tries to remove the overly transcendental and religious impression that most people have on meditation. \\
+
+It is also obvious that a big part of the success of the platform comes from the man behind it, Andy Puddicombe, which was already working as a meditation teacher and speaker before launching Headspace. His TED Talk on meditation benefits has almost 4 million views, and has been featured widely in international press and on TV. 
+
+\subsubsection{Users' feedback}
+
+On Google Play, the application has a 4.5 out of 5 rating with $6.224$ total opinions. Most of the comments praise the content, and how it is a very good way of getting into meditation. Only one negative comment talks about a bug that we haven't been able to reproduce. \\
+
+On iTunes App Store, the application has a 4 out of 5 rating with 394 total opinions. The comments mostly resemble the ones on Google Play, talking about how a life-changer this application can be and how easy it is to start practising. Some users would prefer a more serious design, but still give it the 5 stars since the important part is the content. 
+
+\subsubsection{Wrap-up}
+
+This application shows that a subscription approach to releasing meditation content is feasible. The most important parts of this approach are giving the user a sense of progress, and regularly releasing new content to put more value into the subscription. \\
+
+Also remarkable is the way in which this application presents meditation without the usual accompanying characteristics like yoga positions, incense sticks and Buddhist symbols. This opens the reach of the application to a much more wider audience.
+
+
 
 
 %--------------------------------------------------------------
@@ -782,6 +1199,7 @@ The Android version of this app is free to download and has no in-app purchases;
 %--------------------------------------------------------------
 %			BIBLIOGRAPHY
 %--------------------------------------------------------------
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{unsrt}
 
 \bibliography{refs}
