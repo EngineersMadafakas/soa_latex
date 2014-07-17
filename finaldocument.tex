@@ -40,6 +40,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 
+    
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
@@ -58,9 +59,11 @@
   \renewcommand{\figurename}{Figure}
   \renewcommand{\tablename}{Table}
 %}
+
+
 %\addto\captionsspanish{\renewcommand{\refname}{References}}
 %\usepackage{times} % Uncomment to use the Times New Roman font
-%\addcontentsline{toc}{section}{References}
+
 % ----------------------------------------------
 % The preamble finishes here.
 % ----------------------------------------------
@@ -1214,7 +1217,8 @@ The Android version of this app is free to download and has no in-app purchases;
 %--------------------------------------------------------------
 %			BIBLIOGRAPHY
 %--------------------------------------------------------------
-\addcontentsline{toc}{chapter}{Bibliography}
+\cleardoublepage
+
 \bibliographystyle{unsrt}
 
 \bibliography{refs}
